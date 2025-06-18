@@ -42,8 +42,7 @@ spring:
           uri: lb://ms-almacen-service
           predicates:
             - Path=/api/productos-terminados/**, /api/materia_prima/**, /api/almacenes/**, /api/detalle-ingresos/**, /api/ingresos-materia-prima/**, /api/stock-almacen/**
-          filters:
-            - AuthFilter
+
 
         - id: ms-producto-service
           uri: lb://ms-producto-service
