@@ -4,28 +4,29 @@ server:
 spring:
   application:
     name: ms-diseno-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/db-disenos?useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password:
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     database-platform: org.hibernate.dialect.MySQLDialect
+
   config:
-    import: optional:configserver:http://root:123456@localhost:7070
-  profiles:
-    active: development
+    activate:
+      on-profile: development
 
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8090/eureka
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    prefer-ip-address: true
 
 springdoc:
   api-docs:
@@ -33,8 +34,3 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
-
-logging:
-  level:
-    org.springframework: INFO
-    com.example: DEBUG
