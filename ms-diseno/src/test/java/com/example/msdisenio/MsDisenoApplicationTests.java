@@ -1,13 +1,13 @@
-package com.example.msalmacen;
+package com.example.msdisenio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsAlmacenApplicationTests {
+class MsDisenoApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
