@@ -1,7 +1,9 @@
 spring:
   application:
     name: ms-disenos-service
-  profiles:
-    active: development
   config:
     import: optional:configserver:http://root:123456@localhost:7070
+  profiles:
+    active: development
+
+
