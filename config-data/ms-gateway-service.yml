@@ -56,3 +56,9 @@ spring:
           uri: lb://ms-disenos-service
           predicates:
             - Path=/api/disenos/**
+
+        - id: ms-productos-service
+          uri: lb://ms-productos-service
+          predicates:
+            - Path=/api/productos/**
+
