@@ -1,12 +1,7 @@
-server:
-  port: 8080
-
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/almacen_db
-    username: root
-    password:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  application:
+    name: ms-almacen-service
+  profiles:
+    active: development
+  config:
+    import: optional:configserver:http://root:123456@localhost:7070

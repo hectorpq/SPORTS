@@ -52,3 +52,7 @@ spring:
           filters:
             - AuthFilter
 
+        - id: ms-disenos-service
+          uri: lb://ms-disenos-service
+          predicates:
+            - Path=/api/disenos/**
