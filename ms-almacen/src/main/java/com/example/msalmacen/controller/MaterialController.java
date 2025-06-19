@@ -67,3 +67,5 @@ public class MaterialController {
         return materialService.obtenerStock(id);
     }
 }
+
+
